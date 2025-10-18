@@ -40,6 +40,7 @@ distancia_percorrida = drive_base.distance()
 
 while True:
     print(color_sensor.color())
+# START 1
     if hub.buttons.pressed()==({Button.RIGHT} or {Button.LEFT})and color_sensor.color() == Color.RED:
 
      drive_base.settings(800,800)
@@ -65,6 +66,7 @@ while True:
     # hub.imu.reset_heading(0)
     # drive_base.use_gyro(True)
 
+# START 2
     if hub.buttons.pressed()==({Button.RIGHT} or {Button.LEFT})and color_sensor.color() == Color.YELLOW:
      drive_base.settings(500,500)
      drive_base.straight(-775)
@@ -85,6 +87,7 @@ while True:
      drive_base.settings(800,800)
      drive_base.straight(740)
      drive_base.use_gyro(False)
+# START 3
 
     if hub.buttons.pressed()==({Button.RIGHT} or {Button.LEFT})and color_sensor.color() == Color.BLUE:
      drive_base.settings(600,500)
@@ -96,7 +99,7 @@ while True:
      drive_base.settings(400,300)
      drive_base.straight(-130)
      curva(-40,0.7,0.0004)
-     drive_base.straight(260)
+     drive_base.straight(280)
      drive_base.use_gyro(False)
      hub.imu.reset_heading(0)
      drive_base.use_gyro(True)
@@ -104,25 +107,59 @@ while True:
      att_right_motor.run_angle(300,150)
      att_right_motor.run_angle(-300,150)
      att_left_motor.run_angle(300,240)
-     drive_base.straight(300)
-     drive_base.use_gyro(False)
-     hub.imu.reset_heading(0)
-     drive_base.use_gyro(True)
-     drive_base.straight(275)
-     curva(-47,0.7,0.0004)
-     att_left_motor.run_angle(-300,240)
+     drive_base.straight(535)
+     curva(-51,0.7,0.0004)
+     drive_base.straight(15)
+     att_left_motor.run_angle(-300,270)
      drive_base.straight(-110)
      att_left_motor.run_angle(300,240)
      drive_base.use_gyro(False)
      hub.imu.reset_heading(0)
      drive_base.use_gyro(True)
-     curva(-40,0.7,0.004)
-     drive_base.straight(210)
-     drive_base.straight(-180)
-     curva(-80,0.7,0.0004)
+     curva(-44,0.7,0.004)
+     drive_base.straight(190)
+     drive_base.straight(-160)
+     curva(-117,0.7,0.0004)
+     drive_base.settings(800,800)
+     drive_base.straight(-310)
+     drive_base.use_gyro(False)
+
+# START 4
     
-     
-     
+# START 5
+    
+    if hub.buttons.pressed()==({Button.RIGHT} or {Button.LEFT})and color_sensor.color() == Color.WHITE:
+         drive_base.settings(500,400)
+         drive_base.straight(-432)
+         curva(-42,0.7,0.0003)
+         drive_base.straight(-360)
+         att_left_motor.run_angle(-300,200)
+         drive_base.straight(70)
+         wait(1000)
+         curva(-72,0.8,0.0003)
+         wait(1000)
+         drive_base.straight(-196)
+         drive_base.use_gyro(False)
+         hub.imu.reset_heading(0)
+         drive_base.use_gyro(True)
+         curva(29,0.8,0.0003)
+         drive_base.settings(800,600)
+         drive_base.straight(220)
+         drive_base.settings(500,400)
+         drive_base.straight(-180)
+         drive_base.use_gyro(False)
+         hub.imu.reset_heading(0)
+         drive_base.use_gyro(True)
+         curva(-47,0.9,0.0003)
+         drive_base.straight(-140)
+         drive_base.use_gyro(False)
+         hub.imu.reset_heading(0)
+         drive_base.use_gyro(True)
+         curva(95,0.9,0.0003)
+         drive_base.straight(570)
+
+
+
 
  
 
