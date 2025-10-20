@@ -1,3 +1,4 @@
+
 from pybricks.pupdevices import Motor, ColorSensor
 from pybricks.parameters import Port, Direction, Button, Color
 from pybricks.robotics import DriveBase 
@@ -129,34 +130,19 @@ while True:
 # START 5
     
     if hub.buttons.pressed()==({Button.RIGHT} or {Button.LEFT})and color_sensor.color() == Color.WHITE:
+         att_left_motor.run_angle(500,200)
          drive_base.settings(500,400)
-         drive_base.straight(-432)
-         curva(-42,0.7,0.0003)
-         drive_base.straight(-360)
-         att_left_motor.run_angle(-300,200)
-         drive_base.straight(70)
-         wait(1000)
-         curva(-72,0.8,0.0003)
-         wait(1000)
-         drive_base.straight(-196)
+         drive_base.straight(-660)
          drive_base.use_gyro(False)
          hub.imu.reset_heading(0)
          drive_base.use_gyro(True)
-         curva(29,0.8,0.0003)
-         drive_base.settings(800,600)
-         drive_base.straight(220)
-         drive_base.settings(500,400)
-         drive_base.straight(-180)
+         curva(85,0.6,0.0003)
+         drive_base.straight(100)
          drive_base.use_gyro(False)
          hub.imu.reset_heading(0)
          drive_base.use_gyro(True)
-         curva(-47,0.9,0.0003)
-         drive_base.straight(-140)
-         drive_base.use_gyro(False)
-         hub.imu.reset_heading(0)
-         drive_base.use_gyro(True)
-         curva(95,0.9,0.0003)
-         drive_base.straight(570)
+         curva(-4,0.9,0.004)
+         att_right_motor.run_angle(500,800)
 
 
 
