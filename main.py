@@ -40,7 +40,7 @@ distancia_percorrida = drive_base.distance()
 
 while True:
     print(color_sensor.color())
-
+# START 2
     if hub.buttons.pressed()==({Button.RIGHT} or {Button.LEFT})and color_sensor.color() == Color.RED:
      drive_base.use_gyro(False)
      hub.imu.reset_heading(0)
@@ -75,7 +75,7 @@ while True:
     # hub.imu.reset_heading(0)
     # drive_base.use_gyro(True)
 
-
+#START 1
     if hub.buttons.pressed()==({Button.RIGHT} or {Button.LEFT})and color_sensor.color() == Color.YELLOW:
      drive_base.settings(600,400)
      drive_base.straight(601)
@@ -114,39 +114,65 @@ while True:
      drive_base.straight(599)
      drive_base.use_gyro(False)
 
-
+#START 4
     if hub.buttons.pressed()==({Button.RIGHT} or {Button.LEFT})and color_sensor.color() == Color.NONE:
      drive_base.settings(800,700)
      drive_base.straight(370)
      drive_base.straight(-380)
      drive_base.use_gyro(False)
 
+#START 5
     if hub.buttons.pressed()=={Button.LEFT}and color_sensor.color() == Color.NONE:
+      att_left_motor.run_angle(700,150)
       drive_base.settings(500,400)
-      drive_base.straight(877)
-      curva(82,0.9,0.0004)
-      drive_base.straight(140)
+      drive_base.straight(190)
+      curva(88,0.9,0.0004)
+      drive_base.straight(605)
+      drive_base.use_gyro(False)
+      hub.imu.reset_heading(0)
+      drive_base.use_gyro(True)
+      att_left_motor.run_angle(-700,150)
+      curva(-110,0.5,0.0002)
+     # curva(180,0.9,0.0004)
+      drive_base.straight(135)
+      att_left_motor.run_angle(1200,150)
+      drive_base.straight(-140)
+      drive_base.use_gyro(False)
+      hub.imu.reset_heading(0)
+      drive_base.use_gyro(True)
+      curva(110,0.7,0.0004)
+      drive_base.straight(120)
+      curva(192,0.9,0.0004)
+      drive_base.straight(130)
       drive_base.use_gyro(False)
       hub.imu.reset_heading(0)
       drive_base.use_gyro(True)
       curva(-3,0.9,0.004)
+     # att_left_motor.run_angle(1200,150)
      # drive_base.straight(-100)
       att_right_motor.run_angle(-800,1400)
       drive_base.straight(-100)
       drive_base.use_gyro(False)
       hub.imu.reset_heading(0)
       drive_base.use_gyro(True)
-      curva(15,0.9,0.004)
+      curva(9,0.9,0.004)
       drive_base.straight(-220)
       wait(300)
-      drive_base.straight(150)
-      drive_base.use_gyro(False)
-      hub.imu.reset_heading(0)
-      drive_base.use_gyro(True)
-      curva(-77,0.7,0.0004)
-      drive_base.straight(650)
-      drive_base.use_gyro(False)
+      drive_base.settings(800,8000)
+      drive_base.arc(-390,100)
+      drive_base.straight(180)
 
+      #drive_base.straight()
+     # drive_base.straight(150)
+      #drive_base.use_gyro(False)
+      ##hub.imu.reset_heading(0)
+      #drive_base.use_gyro(True)
+      #curva(-77,0.7,0.0004)
+      #drive_base.straight(650)
+      drive_base.use_gyro(False)
+      #drive_base.arc(100,90)
+
+#START 3
     if hub.buttons.pressed()==({Button.RIGHT} or {Button.LEFT})and color_sensor.color() == Color.BLUE:
      drive_base.use_gyro(False)
      hub.imu.reset_heading(0)
@@ -161,8 +187,8 @@ while True:
      drive_base.use_gyro(False)
 
 
-
-    if hub.buttons.pressed()==({Button.RIGHT} or {Button.LEFT})and color_sensor.color() == Color.WHITE:
+# START 6
+    if hub.buttons.pressed()=={Button.RIGHT} and color_sensor.color() == Color.WHITE:
       drive_base.settings(500,400)
       drive_base.straight(539)
       curva(73,0.9,0.0003)
@@ -192,14 +218,16 @@ while True:
       drive_base.straight(-490)
       drive_base.use_gyro(False)
 
-
-    if hub.buttons.pressed()=={Button.LEFT}and color_sensor.color() == Color.GREEN:
+# START 7
+    if hub.buttons.pressed()=={Button.LEFT}and color_sensor.color() == Color.WHITE:
+       att_right_motor.run_time(1200,800)
        drive_base.settings(600,500)
        drive_base.straight(660)
        curva(35,0.6,0.0003)
-       drive_base.straight(320)
+       drive_base.straight(234)
        att_right_motor.run_angle(-1200,400)
-       drive_base.straight(-200)
+       drive_base.straight(200)
+       drive_base.straight(-300)
     
     if hub.buttons.pressed()=={Button.RIGHT} and color_sensor.color() == Color.GREEN:
          #att_left_motor.run_angle(500,200)
