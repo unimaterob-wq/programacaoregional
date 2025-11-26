@@ -24,6 +24,7 @@ drive_base.use_gyro(True)
 hub = PrimeHub()
 
 
+
 def curva (angulo, kp, ki):
     integral = 0
     while abs(hub.imu.heading())<=abs(angulo):
@@ -140,7 +141,7 @@ while True:
       curva(-9,0.9,0.004)
      # att_left_motor.run_angle(1200,150)
      # drive_base.straight(-100)
-      att_right_motor.run_angle(-600,1770)
+      att_right_motor.run_angle(-600,1695)
       drive_base.straight(-100)
       drive_base.use_gyro(False)
       hub.imu.reset_heading(0)
@@ -247,7 +248,7 @@ while True:
          curva(-39,0.7,0.0004)
          att_left_motor.run_angle(-800,200,wait=False)
          drive_base.settings(400,200)
-         drive_base.straight(560)
+         drive_base.straight(588)
          att_left_motor.run_angle(800,200)
          drive_base.settings(800,8000)
          drive_base.straight(-500)
@@ -268,14 +269,14 @@ while True:
        #att_left_motor.run_angle(-800,500)
        #drive_base.straight(100)
        curva(-41,0.9,0.0004)
-       drive_base.straight(420)
+       drive_base.straight(410)
        att_right_motor.run_angle(800,460,wait=False)
-       att_left_motor.run_angle(-800,200)
+       att_left_motor.run_angle(-800,300)
        wait(300)
        #att_left_motor.run_angle(-180,240)
-       drive_base.straight(-105)
-       drive_base.straight(30)
-       att_left_motor.run_angle(400,220)
+       drive_base.straight(-135)
+       drive_base.straight(50)
+       att_left_motor.run_angle(400,320)
        drive_base.settings(800,8000)
        drive_base.straight(-420)
        drive_base.use_gyro(False)
