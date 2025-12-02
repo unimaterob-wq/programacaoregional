@@ -14,6 +14,15 @@ color_sensor = ColorSensor(Port.D)
 att_right_motor = Motor(Port.F) 
 att_left_motor = Motor (Port.B)
 
+
+#print (right_motor.angle())
+
+#print (left_motor.angle())
+
+#print (att_right_motor.angle())
+
+#print (att_left_motor.angle())
+
 # Initialize the drive base. In this example, the wheel diameter is 56mm.
 # The distance between the two wheel-ground contact points is 112mm.
 drive_base = DriveBase(left_motor, right_motor, wheel_diameter =56, axle_track=113)
@@ -41,7 +50,7 @@ distancia_percorrida = drive_base.distance()
 
 while True:
     print(color_sensor.color())
-# START 2
+   # START 2
     if hub.buttons.pressed()==({Button.RIGHT} or {Button.LEFT})and color_sensor.color() == Color.RED:
      drive_base.use_gyro(False)
      hub.imu.reset_heading(0)
@@ -58,13 +67,13 @@ while True:
      drive_base.use_gyro(False)
      hub.imu.reset_heading(0)
      drive_base.use_gyro(True)
-     drive_base.straight(-135)
+     drive_base.straight(-145)
      curva(49,0.9,0.0004)
-     drive_base.straight(-4)
+    # drive_base.straight(-7)
      att_right_motor.run_angle(500,270)
-     drive_base.straight(-50)
-     curva(62,0.9,0.004)
-     drive_base.settings(800,8000)
+     drive_base.straight(-60)
+     curva(65,0.9,0.004)
+     drive_base.settings(800,9000)
      drive_base.straight(-590)
      drive_base.use_gyro(False)
 
@@ -90,7 +99,7 @@ while True:
      wait(300)
      #att_left_motor.run_angle(-400,475)
      att_left_motor.run_time(-400,1700)
-     att_left_motor.run_angle(400,380)
+    # att_left_motor.run_angle(400,380)
      drive_base.straight(-110)
      
      drive_base.use_gyro(False)
@@ -100,7 +109,7 @@ while True:
      drive_base.settings(600,5000)
      drive_base.straight(-300)
      curva(180,0.5,0.0002)
-     drive_base.settings(800,8000)
+     drive_base.settings(800,9000)
      drive_base.straight(599)
      drive_base.use_gyro(False)
 
@@ -122,7 +131,7 @@ while True:
       hub.imu.reset_heading(0)
       drive_base.use_gyro(True)
      # att_left_motor.run_angle(-700,150)
-      curva(-108,0.4,0.0002)
+      curva(-109.5,0.4,0.0002)
      # curva(180,0.9,0.0004)
       drive_base.straight(170)
       att_left_motor.run_angle(1300,146)
@@ -132,8 +141,8 @@ while True:
       hub.imu.reset_heading(0)
       drive_base.use_gyro(True)
       curva(110,0.3,0.0002)
-      drive_base.straight(125)
-      curva(195,0.3,0.0002)
+      drive_base.straight(124)
+      curva(199.1,0.3,0.0002)
       drive_base.straight(150)
       drive_base.use_gyro(False)
       hub.imu.reset_heading(0)
@@ -146,13 +155,13 @@ while True:
       drive_base.use_gyro(False)
       hub.imu.reset_heading(0)
       drive_base.use_gyro(True)
-      curva(19,0.9,0.0004)
+      curva(11,0.9,0.004)
       att_left_motor.run_angle(1200,89)
-      drive_base.settings(350,190)
-      drive_base.straight(-235)
+      drive_base.settings(350,180)
+      drive_base.straight(-230)
       wait(400)
-      drive_base.settings(800,8000)
-      drive_base.straight(30)
+      drive_base.settings(800,9000)
+      drive_base.straight(60)
       drive_base.arc(-300,80)
       drive_base.straight(500)
       
@@ -172,9 +181,9 @@ while True:
      drive_base.use_gyro(False)
      hub.imu.reset_heading(0)
      drive_base.use_gyro(True)
-     drive_base.settings(400,200)
+     drive_base.settings(500,300)
      drive_base.straight(447)
-     drive_base.settings(600,800)
+     drive_base.settings(600,9000)
      drive_base.straight(-440)
     # drive_base.settings(800,5000)
      #drive_base.straight(290)
@@ -211,7 +220,7 @@ while True:
       curva(-28,0.5,0.004)
       drive_base.straight(-150)
       curva(-71,0.7,0.0003)
-      drive_base.settings(800,8000)
+      drive_base.settings(800,9000)
       drive_base.straight(-490)
       drive_base.use_gyro(False)
 
@@ -256,7 +265,8 @@ while True:
          hub.imu.reset_heading(0)
          drive_base.use_gyro(True)
          curva(28,0.7,0.0004)
-         drive_base.straight(-330)
+         drive_base.settings(800,9000)
+         drive_base.straight(-390)
          drive_base.use_gyro(False)
 
 
@@ -277,7 +287,7 @@ while True:
        drive_base.straight(-135)
        drive_base.straight(50)
        att_left_motor.run_angle(400,320)
-       drive_base.settings(800,8000)
+       drive_base.settings(800,9000)
        drive_base.straight(-420)
        drive_base.use_gyro(False)
 
@@ -291,9 +301,9 @@ while True:
        curva(28.5,0.7,0.0004)
        drive_base.settings(400,200)
        drive_base.straight(620)
-       drive_base.settings(800,8000)
+       drive_base.settings(800,9000)
        drive_base.straight(-250)
-       
+       drive_base.use_gyro(False)      
       # curva(86,0.4,0.0002)
       # drive_base.straight(875)
       # curva(-164,0.5,0.0004)
