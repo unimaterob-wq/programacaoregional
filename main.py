@@ -11,7 +11,7 @@ right_motor = Motor(Port.E) #define o motor de movimento da direita
 color_sensor = ColorSensor(Port.D)
 
 #define os motores de anexos
-att_right_motor = Motor(Port.F) 
+att_right_motor = Motor(Port.F) # cabo descascado
 att_left_motor = Motor (Port.B)
 
 
@@ -145,58 +145,52 @@ while True:
      drive_base.use_gyro(False)
 
 
-
-
-
-
-
-
-
-
-
-#START 4 
-    if hub.buttons.pressed()==({Button.RIGHT} or {Button.LEFT})and color_sensor.color() == Color.NONE:
-     drive_base.settings(800,700)
-     drive_base.straight(370)
-     drive_base.straight(-380)
-     drive_base.use_gyro(False)
-
 #START 5
     if hub.buttons.pressed()=={Button.LEFT}and color_sensor.color() == Color.NONE:
-    #  att_left_motor.run_angle(700,150)
-      drive_base.settings(500,200)
+    
+      att_left_motor.run_angle(700,150,wait=False)
+      drive_base.settings(800,700)
       drive_base.straight(200)
-      curva(89,0.5,0.0002)
-      drive_base.straight(585)
+      curva(39,0.9,0.002)
+      drive_base.straight(260)
+      drive_base.settings(500,400)
+      drive_base.straight(-150)
+      #drive_base.settings(500,200)
+      #drive_base.straight(200)
       drive_base.use_gyro(False)
       hub.imu.reset_heading(0)
       drive_base.use_gyro(True)
-     # att_left_motor.run_angle(-700,150)
-      curva(-113,0.4,0.0002)
+      curva(48,0.5,0.0002)
+      drive_base.straight(440)
+      drive_base.use_gyro(False)
+      hub.imu.reset_heading(0)
+      drive_base.use_gyro(True)
+      att_left_motor.run_angle(-700,160)
+      curva(-109,0.4,0.0002)
      # curva(180,0.9,0.0004)
-      drive_base.straight(150)
+      drive_base.straight(120)
       att_left_motor.run_angle(1300,146)
       drive_base.settings(400,200)
       drive_base.straight(-123)
       drive_base.use_gyro(False)
       hub.imu.reset_heading(0)
       drive_base.use_gyro(True)
-      curva(117,0.3,0.0002)
-      drive_base.settings(600,700)
-      drive_base.straight(270)
+      curva(105,0.3,0.002)
+      drive_base.settings(800,9000)
+      drive_base.straight(470)
       #curva(199.1,0.3,0.0002)
       #drive_base.straight(150)
-      att_right_motor.run_time(800,1120)
-      att_right_motor.run_time(-800,1120)
-      drive_base.settings(800,9000)
-      drive_base.straight(160)
-      drive_base.use_gyro(False)
-      hub.imu.reset_heading(0)
-      drive_base.use_gyro(True)
-      curva(11,0.7,0.004)
-      drive_base.settings(800,9000)
+      #att_right_motor.run_time(800,1120)
+      #att_right_motor.run_time(-800,1120)
+      #drive_base.settings(800,9000)
+      #drive_base.straight(160)
+      #drive_base.use_gyro(False)
+      #hub.imu.reset_heading(0)
+      #drive_base.use_gyro(True)
+      #curva(11,0.7,0.004)
+      #drive_base.settings(800,9000)
      # att_left_motor.run_angle(1200,150)
-      drive_base.straight(360)
+      #drive_base.straight(360)
       #att_right_motor.run_angle(-600,1695)
       #drive_base.straight(-100)
       drive_base.use_gyro(False)
@@ -365,11 +359,11 @@ while True:
        drive_base.use_gyro(True)
        drive_base.settings(500,400)
        drive_base.straight(350)
-       curva(27.7,0.7,0.0004)
+       curva(26.6,0.7,0.0004)
        drive_base.settings(400,200)
-       drive_base.straight(620)
+       drive_base.straight(630)
        drive_base.settings(800,9000)
-       drive_base.straight(-250)
+       drive_base.straight(-260)
        drive_base.use_gyro(False)      
       # curva(86,0.4,0.0002)
       # drive_base.straight(875)
