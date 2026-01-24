@@ -109,8 +109,8 @@ while True:
      att_right_motor.run_angle(900,200)
      #wait(700)
      drive_base.straight(-10)
-     curva(50,0.9,0.004)
-     drive_base.settings(800,9000)
+     curva(52,0.9,0.004)
+     drive_base.settings(900,9000)
      drive_base.straight(-590)
      drive_base.use_gyro(False)
 
@@ -144,7 +144,7 @@ while True:
      hub.imu.reset_heading(0)
      drive_base.use_gyro(True)
      curva(90,0.9,0.0004)
-     drive_base.settings(800,9000)
+     drive_base.settings(900,9000)
      drive_base.straight(680)
      drive_base.use_gyro(False)
      '''#att_left_motor.run_angle(900,600)
@@ -204,12 +204,12 @@ while True:
       drive_base.use_gyro(False)
       hub.imu.reset_heading(0)
       drive_base.use_gyro(True)
-      curva(49,0.9,0.0004)
-      drive_base.straight(370)
+      curva(40,0.9,0.0004)
+
 
 
       drive_base.settings(800,9000)
-      drive_base.straight(1000)
+      drive_base.straight(1370)
      
       drive_base.use_gyro(False)
     ''' drive_base.use_gyro(False)
@@ -264,7 +264,7 @@ while True:
       drive_base.settings(600,500)
       drive_base.straight(280)
       curva(-25,0.9,0.0004)
-      drive_base.straight(305)
+      drive_base.straight(320)
       drive_base.use_gyro(False)
       hub.imu.reset_heading(0)
       drive_base.use_gyro(True)
@@ -346,7 +346,7 @@ while True:
          drive_base.use_gyro(False)
          hub.imu.reset_heading(0)
          drive_base.use_gyro(True)
-         curva(-40,0.7,0.0004)
+         curva(-41,0.7,0.0004)
          att_left_motor.run_angle(-800,200,wait=False)
          drive_base.settings(400,200)
          drive_base.straight(560)
@@ -378,9 +378,9 @@ while True:
        #curva(-41,0.9,0.0004)
        #drive_base.straight(407)
        
-       att_left_motor.run_angle(-800,230)
+       att_left_motor.run_angle(-850,230)
        wait(500)
-       att_right_motor.run_angle(-900,410)
+       att_right_motor.run_angle(-950,410)
        wait(500)
        #drive_base.straight(25)
        att_left_motor.run_angle(800,710)
@@ -404,6 +404,7 @@ while True:
 
        curva(-30,0.9,0.004)
        wait(600)
+       drive_base.settings(-60)
 
       # drive_base.straight(-70)
        drive_base.use_gyro(False)
@@ -415,7 +416,8 @@ while True:
        hub.imu.reset_heading(0)
        drive_base.use_gyro(True)
        #curva(-10,0.9,0.004)
-       drive_base.straight(-300)
+       drive_base.settings(800,9000)
+       drive_base.straight(-360)
        
        drive_base.use_gyro(False)
 
