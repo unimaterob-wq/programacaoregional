@@ -102,13 +102,14 @@ while True:
      drive_base.use_gyro(False)
      hub.imu.reset_heading(0)
      drive_base.use_gyro(True)
-     drive_base.straight(-135)
+     drive_base.straight(-155)
      curva(48,0.9,0.0004)
     # drive_base.straight(-7)
    #  drive_base.straight(10)
      att_right_motor.run_angle(900,200)
+     drive_base.straight(40)
      #wait(700)
-     drive_base.straight(-10)
+     drive_base.straight(-50)
      curva(52,0.9,0.004)
      drive_base.settings(900,9000)
      drive_base.straight(-590)
@@ -122,12 +123,12 @@ while True:
      drive_base.use_gyro(False)
      hub.imu.reset_heading(0)
      drive_base.use_gyro(True)
-     drive_base.settings(500,400)
+     drive_base.settings(700,600)
      drive_base.straight(600)
      curva(180,0.4,0.0002)
      drive_base.straight(-251)
      wait(500)
-     drive_base.straight(100)
+     drive_base.straight(90)
      drive_base.use_gyro(False)
      hub.imu.reset_heading(0)
      drive_base.use_gyro(True)
@@ -137,8 +138,12 @@ while True:
      drive_base.straight(125)
      #att_left_motor.run_angle(800,48)
      drive_base.straight(40)
-     att_right_motor.run_angle(800,400,wait=False)
+
      att_left_motor.run_angle(800,-120)
+
+     att_right_motor.run_angle(800,400)
+     att_right_motor.run_angle(800,-400)
+
      drive_base.straight(-180)
      drive_base.use_gyro(False)
      hub.imu.reset_heading(0)
@@ -185,7 +190,7 @@ while True:
      drive_base.use_gyro(False)'''
 
 
-#START 5
+#START 4
     if hub.buttons.pressed()=={Button.LEFT} and color_sensor.color() == Color.NONE:
       print('to aq 3')
 
@@ -198,13 +203,13 @@ while True:
       curva(42,0.9,0.0004)
       drive_base.straight(260)
       drive_base.settings(500,400)
-      drive_base.straight(-150)
+      drive_base.straight(-160)
       #drive_base.settings(500,200)
       #drive_base.straight(200)
       drive_base.use_gyro(False)
       hub.imu.reset_heading(0)
       drive_base.use_gyro(True)
-      curva(40,0.9,0.0004)
+      curva(42.5,0.9,0.0004)
 
 
 
@@ -361,7 +366,7 @@ while True:
          drive_base.straight(-390)
          drive_base.use_gyro(False)
 
-
+  #start 5
     if hub.buttons.pressed()=={Button.LEFT}and color_sensor.color() == Color.YELLOW:
        print('to aq 8')
 
@@ -409,7 +414,7 @@ while True:
       # drive_base.straight(-70)
        drive_base.use_gyro(False)
        hub.imu.reset_heading(0)
-       curva(27,0.9,0.004)
+       curva(14.5,0.9,0.004)
        drive_base.settings(800,9000)
        #drive_base.straight(-185)
        drive_base.use_gyro(False)
