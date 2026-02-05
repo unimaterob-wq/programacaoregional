@@ -140,18 +140,18 @@ while True:
      drive_base.use_gyro(False)
      hub.imu.reset_heading(0)
      drive_base.use_gyro(True)
-     curva(-85.6,0.4,0.0002)
+     curva(-84.6,0.4,0.0002)
      wait(500)
      drive_base.settings(400,100)
      drive_base.straight(115)
      #att_left_motor.run_angle(800,48)
-     drive_base.straight(36)
+     drive_base.straight(26)
 
      att_left_motor.run_angle(800,120)
 
      att_right_motor.run_time(-900,800)
      wait(500)
-     att_right_motor.run_time(900,800)
+     att_right_motor.run_time(900,700)
 
      drive_base.straight(-170)
      drive_base.use_gyro(False)
